@@ -7,8 +7,11 @@
 # <function_name>(3,0) -> 3
 
 def function_sum(a, b):
-    result = a + b
-    return result
+    if b == 0:
+        return a
+    else: 
+        return function_sum(a + 1, b - 1)
+
 print(function_sum(0, 0))
 print(function_sum(0, 2))
 print(function_sum(3, 0))
