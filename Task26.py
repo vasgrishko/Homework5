@@ -7,8 +7,11 @@
 # <function_name>(2,4) -> 16
 
 def function_degree(a, b):
-    result = a ** b
-    return result
+    if b == 0:
+        return 1
+    else:
+        return a * function_degree(a, b - 1)
+
 print(function_degree(2, 0))
 print(function_degree(2, 1))
 print(function_degree(2, 3))
